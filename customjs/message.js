@@ -1,5 +1,10 @@
 // document onload function
 $(document).ready(function(){
+
+	$().mouseover(function(){
+		alert('hare krishna');
+	});
+
 	$("button").click(function(){
 		$.get("http://localhost/jqueryExamples/index.php", function(data, status){
 			//alert("Status: " + status);
@@ -10,7 +15,7 @@ $(document).ready(function(){
 				var names = jsonData.names[i];
 				console.log(names.first_name);
 				document.write("<table border=1><tr>");
-				document.write("<td> "+names.first_name+"</td>");				
+				document.write("<td> "+names.first_name+"</td>");
 				document.write("</tr></table>");
 			}
 		});
@@ -27,7 +32,7 @@ $( document ).ready(function() {
 			for (var i = 0; i < jsonData.names.length; i++) {
 				var names = jsonData.names[i];
 				console.log(names.first_name);
-				document.write("<b>"+names.first_name+"</b></br>");	
+				document.write("<b>"+names.first_name+"</b></br>");
 			}
 		});
 });
